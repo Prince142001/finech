@@ -34,7 +34,7 @@ function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="bg-primary-main text-white px-3 py-2.5 rounded-full font-medium capitalize flex items-center justify-center gap-1.5 hover:bg-blue-700 transition"
+                  className="bg-primary-main text-white px-3 py-2.5 rounded-lg font-medium capitalize flex items-center justify-center gap-1.5 hover:bg-blue-700 transition"
                 >
                   get started
                   <span className="">
