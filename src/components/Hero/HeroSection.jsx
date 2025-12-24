@@ -3,6 +3,8 @@ import BackgrounGradient from "../../assets/Background-Gradient.png";
 import BackgrounPattern from "../../assets/Background-Pattern.png";
 import EnvelopeSimple from "../../assets/EnvelopeSimple.png";
 import Vector from "../../assets/Vector.png";
+import RightContiner from "./RightContiner";
+import Partner from "./Partner";
 
 function HeroSection() {
   return (
@@ -19,17 +21,17 @@ function HeroSection() {
         style={{ backgroundImage: `url(${BackgrounPattern})` }}
       />
 
-      <div className="relative z-30">
-        <div>
-          <div>
-            <p className="text-primary-main text-[16px] leading-4.5 font-semibold">
+      <div className="relative z-30 flex items-center">
+        <div className="relative w-1/2">
+          <div className="">
+            <p className="text-primary-main text-[16px] leading-4.5 font-semibold -tracking-wide">
               FINANCE SOLUTION
             </p>
-            <h2 className="mt-8 text-white text-[64px] leading-20 font-medium">
+            <h2 className="mt-6 text-white text-[64px] leading-18 font-medium -tracking-wide">
               Empowering the Next Generation of Financial Infrastructure,
               Designed for You
             </h2>
-            <p className="mt-8 text-white text-[16px] leading-4.5 font-normal">
+            <p className="mt-6 text-white text-[16px] leading-4.5 font-normal -tracking-wide">
               Powerful APIs and seamless integrations to help businesses move
               money, manage risk, and scale globally.
             </p>
@@ -67,7 +69,10 @@ function HeroSection() {
             </form>
           </div>
         </div>
-        <div></div>
+        <div className="w-1/2 relative">
+          <RightContiner />
+        </div>
+        <Partner />
       </div>
     </section>
   );
