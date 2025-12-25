@@ -4,7 +4,7 @@ import "./App.css";
 import HeroSection from "./components/Hero/HeroSection";
 import WhyFinech from "./components/WhyFinech/WhyFinech";
 import WhoIsItFor from "./components/WhoIsItFor/WhoIsItFor";
-// import ApiAndDeveloper from "./components/ApiAndDeveloper/ApiAndDeveloper";
+import FinanceSolution from "./components/FinanceSolution/FinanceSolution";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function App() {
       <HeroSection />
       <WhyFinech />
       <WhoIsItFor />
-      {/* <ApiAndDeveloper /> */}
+      <FinanceSolution />
     </>
   );
 }
