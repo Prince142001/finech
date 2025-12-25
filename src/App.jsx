@@ -4,6 +4,7 @@ import "./App.css";
 import HeroSection from "./components/Hero/HeroSection";
 import WhyFinech from "./components/WhyFinech/WhyFinech";
 import WhoIsItFor from "./components/WhoIsItFor/WhoIsItFor";
+// import ApiAndDeveloper from "./components/ApiAndDeveloper/ApiAndDeveloper";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,6 +15,7 @@ function App() {
       <HeroSection />
       <WhyFinech />
       <WhoIsItFor />
+      {/* <ApiAndDeveloper /> */}
     </>
   );
 }
