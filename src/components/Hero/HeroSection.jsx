@@ -8,7 +8,7 @@ import Partner from "./Partner";
 
 function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden px-20">
+    <section className="relative w-full overflow-hidden px-20">
       <div className="absolute inset-0 bg-neutral z-0" />
 
       <div
@@ -21,8 +21,8 @@ function HeroSection() {
         style={{ backgroundImage: `url(${BackgrounPattern})` }}
       />
 
-      <div className="relative z-30 flex items-center">
-        <div className="relative w-1/2">
+      <div className="relative h-[110vh] z-30 flex gap-36 mt-40">
+        <div className="relative w-2/5">
           <div className="">
             <p className="text-primary-main text-[16px] leading-4.5 font-semibold -tracking-wide">
               FINANCE SOLUTION

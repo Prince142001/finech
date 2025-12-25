@@ -23,7 +23,7 @@ function Partner() {
     },
   ];
   return (
-    <div className="absolute bottom-8">
+    <div className="absolute bottom-12">
       <p className="text-white text-lg leading-5 font-medium">
         Partners in Financial Success
       </p>
