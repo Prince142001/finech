@@ -1,8 +1,11 @@
 import React from "react";
 import ApiAndDeveloperBackgroundGradient from "../../assets/ApiAndDeveloper-Background-Gradient.png";
 import BackgrounPattern from "../../assets/Background-Pattern.png";
-import EnvelopeSimple from "../../assets/EnvelopeSimple.png";
 import Vector from "../../assets/Vector.png";
+import Code from "../../assets/Code.png";
+import FileLock from "../../assets/FileLock.png";
+import FileCode from "../../assets/FileCode.png";
+import ApiIntegration from "./ApiIntegration";
 
 function ApiAndDeveloper() {
   return (
@@ -21,8 +24,8 @@ function ApiAndDeveloper() {
           style={{ backgroundImage: `url(${BackgrounPattern})` }}
         />
 
-        <div className="relative z-30 flex items-center">
-          <div className="relative w-2/5">
+        <div className="relative z-30 flex items-center gap-36">
+          <div className="relative w-[45%]">
             <div className="">
               <p className="text-primary-main text-[16px] leading-4.5 font-semibold -tracking-wide">
                 API & DEVELOPER
@@ -50,19 +53,43 @@ function ApiAndDeveloper() {
                   </span>
                 </a>
               </div>
+
+              <ul className="mt-16 space-y-5">
+                <li className="flex items-center gap-2">
+                  <img
+                    src={Code}
+                    alt="Code"
+                    className="w-6 h-6 object-contain"
+                  />
+                  <span className="text-white text-[16px] leading-4.5 font-normal -tracking-wide">
+                    RESTful APIs & Webhooks
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <img
+                    src={FileCode}
+                    alt="FileCode"
+                    className="w-6 h-6 object-contain"
+                  />
+                  <span className="text-white text-[16px] leading-4.5 font-normal -tracking-wide">
+                    SDKs for Multiple Languages
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <img
+                    src={FileLock}
+                    alt="FileLock"
+                    className="w-6 h-6 object-contain"
+                  />
+                  <span className="text-white text-[16px] leading-4.5 font-normal -tracking-wide">
+                    Sandbox for Testing
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="w-3/5 relative">
-            <div
-              className={`relative bg-linear-to-r from-[#FFFFFF1A]  to-transparent p-[16.8px] border-[1.4px] border-[#ededed] rounded-[16.8px]`}
-            >
-              <div className="absolute left-[16.8px] top-2 flex items-center justify-end gap-1.5">
-                <div className="w-3.25 h-3.25 bg-white rounded-full overflow-hidden"></div>
-                <div className="w-3.25 h-3.25 bg-white rounded-full overflow-hidden"></div>
-                <div className="w-3.25 h-3.25 bg-white rounded-full overflow-hidden"></div>
-              </div>
-              <img src="" alt="card" />
-            </div>
+          <div className="w-1/2 relative">
+            <ApiIntegration />
           </div>
         </div>
       </section>
