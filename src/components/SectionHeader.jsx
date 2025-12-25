@@ -1,4 +1,4 @@
-export function SectionHeader(prop) {
+export default function SectionHeader(prop) {
   return (
     <header className={`${prop.headerClassname} mx-auto`}>
       <p className="text-primary-main text-[16px] leading-4.5 font-semibold -tracking-wide text-center">

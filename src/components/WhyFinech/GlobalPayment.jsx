@@ -4,14 +4,12 @@ import EUEuropeanUnionflag from "../../assets/EU European Union flag.png";
 import Australiaflag from "../../assets/Australia flag.png";
 import Japanflag from "../../assets/Japan flag.png";
 import UKUnitedKingdomflag from "../../assets/UK United Kingdom flag.png";
-import Vector from "../../assets/Vector.png"; // Assuming this is the arrow icon
+import Vector from "../../assets/Vector.png";
 
 function GlobalPayment() {
-  // 1. Structure the data to match the 4 rows in the image
   const payments = [
     {
       id: 1,
-      active: true, // This triggers the black background
       input: {
         sign: "$",
         value: "1,237.58",
@@ -27,7 +25,6 @@ function GlobalPayment() {
     },
     {
       id: 2,
-      active: false,
       input: {
         sign: "$",
         value: "1,237.58",
@@ -43,7 +40,6 @@ function GlobalPayment() {
     },
     {
       id: 3,
-      active: false,
       input: {
         sign: "$",
         value: "1,237.58",
@@ -59,7 +55,6 @@ function GlobalPayment() {
     },
     {
       id: 4,
-      active: false,
       input: {
         sign: "$",
         value: "1,237.58",
@@ -76,22 +71,18 @@ function GlobalPayment() {
   ];
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 p-10">
-      {/* Main Container Card */}
+    <div className="flex justify-center items-center bg-gray-50 p-10">
       <div className="bg-white p-4 rounded-3xl shadow-xl border border-gray-100 w-full max-w-md">
         <ul className="flex flex-col gap-4">
           {payments.map((item) => (
             <li
               key={item.id}
-              className={`flex items-center justify-between p-6 rounded-2xl border transition-all duration-200 ${
-                item.active
-                  ? "bg-[#111111] text-white border-[#111111] shadow-lg" // Dark Mode (Active)
-                  : "bg-white text-black border-gray-100 shadow-sm hover:shadow-md" // Light Mode (Inactive)
-              }`}
+              // Added 'group' here to control child elements on hover
+              className="group flex items-center justify-between p-[14.4px] rounded-[10.8px] border-[0.9px] border-gray-100 bg-white shadow-sm transition-all duration-300 cursor-pointer hover:shadow-lg hover:bg-[#111111] hover:border-[#111111]"
             >
-              {/* Left Side: Input Currency */}
-              <div className="flex flex-col gap-1 w-[40%]">
-                <h3 className="text-2xl font-semibold tracking-tight">
+              {/* Left Side: Input */}
+              <div className="flex flex-col gap-[3.6px] w-[40%]">
+                <h3 className="text-[18px] font-medium text-neutral leading-5 -tracking-wide transition-colors duration-300 group-hover:text-white">
                   {item.input.sign}
                   {item.input.value}
                 </h3>
@@ -101,35 +92,26 @@ function GlobalPayment() {
                     alt={item.input.code}
                     className="w-5 h-5 rounded-full object-cover"
                   />
-                  <p
-                    className={`text-sm font-medium ${
-                      item.active ? "text-gray-300" : "text-gray-500"
-                    }`}
-                  >
+                  <p className="text-[10.8px] font-medium text-gray-500 leading-5 -tracking-wide transition-colors duration-300 group-hover:text-gray-300">
                     {item.input.code}
                   </p>
                 </div>
               </div>
 
+              {/* Center: Arrow Button */}
               <div className="flex justify-center items-center w-[20%]">
-                <div
-                  className={`flex items-center justify-center w-10 h-10 rounded-full ${
-                    item.active ? "bg-[#007AFF]" : "bg-gray-100"
-                  }`}
-                >
+                <div className="flex items-center justify-center w-[28.8px] h-[28.8px] rounded-full bg-gray-100 transition-colors duration-300 group-hover:bg-[#007AFF]">
                   <img
                     src={Vector}
                     alt="To"
-                    className={`w-4 h-4 ${
-                      item.active ? "brightness-0 invert" : "opacity-40"
-                    }`}
+                    className="w-3 h-3 object-contain rotate-45 opacity-40 transition-all duration-300 group-hover:opacity-100 group-hover:brightness-0 group-hover:invert"
                   />
                 </div>
               </div>
 
-              {/* Right Side: Output Currency */}
-              <div className="flex flex-col gap-1 w-[40%] text-right items-end">
-                <h3 className="text-2xl font-semibold tracking-tight">
+              {/* Right Side: Output */}
+              <div className="flex flex-col gap-[3.6px] w-[40%] text-right items-end">
+                <h3 className="text-[18px] font-medium text-neutral leading-5 -tracking-wide transition-colors duration-300 group-hover:text-white">
                   {item.output.sign}
                   {item.output.value}
                 </h3>
@@ -139,11 +121,7 @@ function GlobalPayment() {
                     alt={item.output.code}
                     className="w-5 h-5 rounded-full object-cover"
                   />
-                  <p
-                    className={`text-sm font-medium ${
-                      item.active ? "text-gray-300" : "text-gray-500"
-                    }`}
-                  >
+                  <p className="text-[10.8px] font-medium text-gray-500 leading-5 -tracking-wide transition-colors duration-300 group-hover:text-gray-300">
                     {item.output.code}
                   </p>
                 </div>

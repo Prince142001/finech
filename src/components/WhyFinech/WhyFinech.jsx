@@ -1,10 +1,12 @@
 import React from "react";
-import { SectionHeader } from "../SectionHeader";
+import SectionHeader from "../SectionHeader";
 import { Header } from "./Header";
 import GlobeHemisphereWest from "../../assets/GlobeHemisphereWest.png";
 import Bank from "../../assets/Bank.png";
 import VisaCard from "./VisaCard";
 import GlobalPayment from "./GlobalPayment";
+import ApiCapabilitiesTable from "./ApiCapabilitiesTable";
+import FeatureGrid from "./FeatureGrid";
 
 function WhyFinech() {
   return (
@@ -44,7 +46,7 @@ function WhyFinech() {
             </div>
           </div>
         </div>
-        <div className="flex items-start gap-6 flex-row-reverse">
+        <div className="mt-6 flex items-start gap-6 flex-row-reverse">
           <div className="w-2/5 p-6 bg-white rounded-3xl border border-[#EDEDED] overflow-hidden">
             <Header
               img={GlobeHemisphereWest}
@@ -52,6 +54,13 @@ function WhyFinech() {
               heading="Global Payments"
               description="Accept payments in 100+ currencies with instant settlement, ensuring smooth transactions across borders."
             />
+            <div>
+              <div>
+                <div>
+                  <FeatureGrid />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="w-3/5 p-6 bg-white rounded-3xl border border-[#EDEDED] overflow-hidden">
             <Header
@@ -60,6 +69,13 @@ function WhyFinech() {
               heading="Banking as a Service"
               description="Issue virtual and physical cards effortlessly, securely hold and manage funds, and seamlessly provide a wide range of financial services."
             />
+            <div>
+              <div>
+                <div>
+                  <ApiCapabilitiesTable />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

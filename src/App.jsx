@@ -3,6 +3,7 @@ import Navbar from "./components/Header/Navbar";
 import "./App.css";
 import HeroSection from "./components/Hero/HeroSection";
 import WhyFinech from "./components/WhyFinech/WhyFinech";
+import WhoIsItFor from "./components/WhoIsItFor/WhoIsItFor";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <WhyFinech />
+      <WhoIsItFor />
     </>
   );
 }
