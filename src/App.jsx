@@ -5,6 +5,7 @@ import HeroSection from "./components/Hero/HeroSection";
 import WhyFinech from "./components/WhyFinech/WhyFinech";
 import WhoIsItFor from "./components/WhoIsItFor/WhoIsItFor";
 import FinanceSolution from "./components/FinanceSolution/FinanceSolution";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <WhyFinech />
       <WhoIsItFor />
       <FinanceSolution />
+      <Footer />
     </>
   );
 }
